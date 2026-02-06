@@ -190,3 +190,14 @@ button:hover {
     font-size: 14px;
 }
 
+.sw-card {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.sw-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s ease;
+}
+
