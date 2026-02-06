@@ -1,6 +1,4 @@
-/* ===============================
-   ANIMACIÓN AL HACER SCROLL
-   =============================== */
+
 const cards = document.querySelectorAll(".sw-card");
 
 const observer = new IntersectionObserver(
@@ -16,10 +14,6 @@ const observer = new IntersectionObserver(
 
 cards.forEach(card => observer.observe(card));
 
-
-/* ===============================
-   VALIDACIÓN DEL FORMULARIO
-   =============================== */
 const form = document.querySelector("form");
 
 form.addEventListener("submit", function (e) {
@@ -34,7 +28,6 @@ form.addEventListener("submit", function (e) {
         return;
     }
 
-    // Guardar en localStorage
     const datos = {
         nombre,
         valoracion,
@@ -50,12 +43,11 @@ form.addEventListener("submit", function (e) {
 });
 
 
-/* ===============================
-   MENSAJE DE BIENVENIDA (VISIBLE)
    =============================== */
 window.addEventListener("load", () => {
     setTimeout(() => {
         alert("Bienvenido a FitPeak");
     }, 800);
 });
+
 
