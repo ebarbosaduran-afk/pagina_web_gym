@@ -43,11 +43,12 @@ form.addEventListener("submit", function (e) {
 });
 
 
-   =============================== */
+   
 window.addEventListener("load", () => {
     setTimeout(() => {
         alert("Bienvenido a FitPeak");
     }, 800);
 });
+
 
 
