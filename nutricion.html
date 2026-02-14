@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="nutricion.css">
+    <link rel="icon" href="fitpeaknutricion.png">
+    <title>Nutrición - FitPeak</title>
+</head>
+
+<body>
+    <header>
+        <img src="fitpeaknutricion.png" width="135px" alt="Logo FitPeak">
+        <nav>
+            <a href="index.html">Página principal</a>
+            <a href="suplementacion.html">Suplementación</a>
+            <a href="nutricion.html" class="activo">Nutrición</a>
+            <a href="leyendas.html">Leyendas</a>
+            <a href="entrenamientos.html">Entrenamientos</a>
+            <a href="prevencion.html">Prevención</a>
+        </nav>
+    </header>
+
+    <h1>Ciencia de la Nutrición</h1>
+    
+    <p>
+        Antes de hablar de calorías, debemos entender que la comida no es solo combustible. 
+        Existen los <strong>Micronutrientes</strong> (vitaminas y minerales), que actúan como 
+        <strong>el aceite del motor</strong>: regulan tu metabolismo y sistema inmune para que todo fluya. 
+        Sin ellos, la maquinaria falla y te estancas.
+    </p>
+    <p>
+        Sin embargo, para cambiar tu físico (ganar músculo o perder grasa), los verdaderos protagonistas son los 
+        <strong>Macronutrientes</strong>. Aquí tienes los 3 grandes bloques explicados fácil:
+    </p>
+
+    <div class="contenedor-principal">
+        <div class="cabecera-seccion">
+            <h2>Los 3 Pilares (Macronutrientes)</h2>
+        </div>
+
+        <div class="contenedor-tarjetas">
+            <div class="tarjeta">
+                <div class="icono">🥩</div>
+                <h3>Proteínas</h3>
+                <p><strong>Los bloques de construcción.</strong><br> 
+                Imagina que tu músculo es una pared; la proteína son los ladrillos necesarios para repararla y hacerla más grande tras el entrenamiento.</p>
+            </div>
+
+            <div class="tarjeta">
+                <div class="icono">🍚</div>
+                <h3>Carbohidratos</h3>
+                <p><strong>Tu energía de alto rendimiento.</strong><br> 
+                Es la fuente de energía favorita de tu cerebro, la que necesitas para rendir mejor y tener fuerza durante el entrenamiento.</p>
+            </div>
+
+            <div class="tarjeta">
+                <div class="icono">🥑</div>
+                <h3>Grasas</h3>
+                <p><strong>El protector hormonal.</strong><br> 
+                Son vitales para mantener tu testosterona alta y ayudan a tu cuerpo a absorber vitaminas esenciales que no se disuelven en agua.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor-calculadora">
+        <h2>Calculadora de Calorías y Objetivos</h2>
+        <p>Aplica la ciencia a tu cuerpo. Calcula tu punto de partida.</p>
+        
+        <form id="form-calculadora">
+            <label>Peso (kg):</label>
+            <input type="number" id="peso" placeholder="Ej: 75" required>
+            
+            <label>Altura (cm):</label>
+            <input type="number" id="altura" placeholder="Ej: 180" required>
+            
+            <label>Edad:</label>
+            <input type="number" id="edad" placeholder="Ej: 22" required>
+
+            <label>Género:</label>
+            <select id="genero">
+                <option value="hombre">Hombre</option>
+                <option value="mujer">Mujer</option>
+            </select>
+
+            <label>Nivel de Actividad:</label>
+            <select id="actividad">
+                <option value="1.2">Sedentario (Poco o nada)</option>
+                <option value="1.375">Ligero (1-3 días ejercicio)</option>
+                <option value="1.55">Moderado (3-5 días ejercicio)</option>
+                <option value="1.725">Alto (6-7 días ejercicio)</option>
+            </select>
+            <br><br>
+            <button type="submit">Calcular Plan</button>
+        </form>
+
+        <div id="resultado" style="display:none;"></div>
+    </div>
+
+    <div class="contenedor-principal">
+        <div class="cabecera-seccion">
+            <h2>Estrategias Basadas en Evidencia (2024/25)</h2>
+            <p>Olvida los mitos de la vieja escuela. Esto es lo que dicen los estudios recientes.</p>
+        </div>
+        
+        <div class="contenedor-estrategias">
+            
+            <div class="tarjeta tarjeta-detalle">
+                <div class="icono">🔥</div>
+                <h3>Definición</h3>
+                <p><strong>Objetivo:</strong> Perder grasa manteniendo la intensidad del entrenamiento para evitar la atrofia muscular.</p>
+                
+                <ul class="lista-detalle">
+                    <li>
+                        <strong>📉 Déficit Calórico Controlado:</strong><br>
+                        La evidencia de 2024 subraya que un déficit agresivo (>500-750 kcal) activa "alarmas" en tu cuerpo que frenan la pérdida de grasa y destruyen el músculo.<br>
+                        <em>Estrategia:</em> Mantén un déficit moderado (300-500 kcal).
+                    </li>
+                    <li>
+                        <strong>🥗 Proteína (El umbral eficiente):</strong><br>
+                        Estudios actualizados (Examine 2024/2025) sitúan el rango óptimo en <strong>1.6 – 2.4 g/kg</strong>. Quedarse en 1.6 - 1.8 g/kg es perfecto si necesitas comer más carbohidratos para tener fuerza al entrenar.
+                    </li>
+                    <li>
+                        <strong>⚡ Prioridad Carbohidratos (El escudo):</strong><br>
+                        Las dietas "Low-carb" (bajas en hidratos) pueden hacerte perder fuerza. Y si pierdes fuerza, tu cuerpo deja de ver necesario mantener el músculo. Los carbohidratos son tu mejor defensa anti-catabolismo.
+                    </li>
+                    <li>
+                        <strong>🚶 Tip de Movimiento:</strong><br>
+                        El entrenamiento de fuerza es el rey. Usa los pasos diarios (NEAT) para quemar calorías extra sin cansarte, en lugar de matarte a cardio que compita con tu recuperación.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tarjeta tarjeta-detalle">
+                <div class="icono">🦍</div>
+                <h3>Volumen</h3>
+                <p><strong>Objetivo:</strong> Hipertrofia máxima con la mínima ganancia de grasa posible.</p>
+                
+                <ul class="lista-detalle">
+                    <li>
+                        <strong>📈 Superávit Calórico "Magro":</strong><br>
+                        Investigaciones de julio 2024 demuestran que comer muchísimo ("Volumen sucio") no crea más músculo, solo te pone gordo. <br>
+                        <em>Estrategia:</em> Un superávit pequeño del <strong>5-20%</strong> sobre tu mantenimiento es suficiente.
+                    </li>
+                    <li>
+                        <strong>🍝 Nutrición para crecer:</strong><br>
+                        El estándar de oro es <strong>1.6 – 2.2 g/kg</strong> de proteína. Comer más de eso apenas ayuda. Es mucho más inteligente usar esas calorías en carbohidratos (arroz, pasta) para tener energía infinita entrenando.
+                    </li>
+                    <li>
+                        <strong>🏋️ Tip de Entrenamiento:</strong><br>
+                        La clave no es comer hasta reventar, sino la <strong>sobrecarga progresiva</strong> (levantar más peso o hacer más repeticiones). La dieta solo sirve para recuperar el daño y llenar tus depósitos de energía.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor-principal">
+        <div class="cabecera-seccion">
+            <h2>Más allá de las Calorías</h2>
+            <p>Factores olvidados que determinan tu éxito.</p>
+        </div>
+        <div class="contenedor-tarjetas">
+            <div class="tarjeta">
+                <div class="icono">💤</div>
+                <h3>El Factor Sueño</h3>
+                <p>Dormir menos de 7 horas dispara la hormona del hambre y hace que tu cuerpo prefiera guardar grasa. Si duermes mal, es fisiológicamente más difícil definir.</p>
+            </div>
+            <div class="tarjeta">
+                <div class="icono">⏱️</div>
+                <h3>¿Frecuencia de Comidas?</h3>
+                <p>Comer cada 3 horas NO acelera el metabolismo. Lo que importa es el total de comida al final del día. Come cuando se adapte a tu vida, no seas esclavo del reloj.</p>
+            </div>
+            <div class="tarjeta">
+                <div class="icono">💧</div>
+                <h3>Hidratación Real</h3>
+                <p>Un 2% de deshidratación te quita mucha fuerza. No solo bebas agua; asegúrate de reponer sales minerales (sodio) si sudas mucho entrenando.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="nutricion.js"></script>
+</body>
+</html>
