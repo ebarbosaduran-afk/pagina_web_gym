@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="leyendasdelgym.css">
+    <link rel="icon" href="fitpeaknutricion.png">
+    <title>Leyendas - FitPeak</title>
+</head>
+
+<body>
+
+    <body>
+
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+            <source src="imagenes/Arnold Schwarzenegger mr olympia 1975 Remastered HD.mkv" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+    </div>
+    <header>
+        <img src="imagenes/fitpeak.png" alt="Logo de FitPeak">
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="nutricion.html">Nutrición</a>
+            <a href="leyendas.html" class="activo">Leyendas</a>
+            <a href="entrenamientos.html">Entrenos</a>
+        </nav>
+    </header>
+
+    <div class="hero-text">
+        <h1>Titanes del Culturismo</h1>
+        <p>Conoce la historia, las estadísticas y los métodos de entrenamiento de los hombres que desafiaron la genética humana.</p>
+    </div>
+
+    <div class="leyendas-wrapper">
+
+        <article class="leyenda-card">
+            <div class="leyenda-media">
+                <img src="/imagenes/arnold posando.jpg" alt="Arnold Schwarzenegger posando">
+            </div>
+            <div class="leyenda-info">
+                <h2>Arnold Schwarzenegger</h2>
+                <h3>"El Roble Austriaco"</h3>
+                <ul>
+                    <li><strong>Era:</strong> Golden Era (70s)</li>
+                    <li><strong>Mr. Olympia:</strong> 7 Títulos</li>
+                    <li><strong>Filosofía:</strong> Alto Volumen y Frecuencia.</li>
+                </ul>
+                <p>
+                    Arnold revolucionó el deporte con su carisma y su pecho masivo. Su rutina de "doble división" (entrenar mañana y tarde) es legendaria.
+                    Creía firmemente en la conexión mente-músculo: <em>"Visualiza que tu bíceps es una montaña llenando la habitación".</em>
+                </p>
+            </div>
+        </article>
+
+        <article class="leyenda-card inverso">
+            <div class="leyenda-media">
+                <img src="/imagenes/roonie posando.webp" alt="Ronnie Coleman Peso Muerto">
+            </div>
+            <div class="leyenda-info">
+                <h2>Ronnie Coleman</h2>
+                <h3>"The King"</h3>
+                <ul>
+                    <li><strong>Era:</strong> Mass Monster (90s-00s)</li>
+                    <li><strong>Mr. Olympia:</strong> 8 Títulos</li>
+                    <li><strong>Filosofía:</strong> Powerbuilding (Fuerza + Hipertrofia).</li>
+                </ul>
+                <p>
+                    Nadie ha combinado tamaño y definición como Ronnie. Famoso por levantar 800 libras en sentadilla gritando 
+                    <strong>"Light Weight Baby!"</strong>. Llevó el cuerpo humano más allá de lo que se creía posible, pagando un alto precio físico.
+                </p>
+            </div>
+        </article>
+
+        <article class="leyenda-card">
+            <div class="leyenda-media">
+                <img src="/imagenes/tom platz.jpg" alt="Tom Platz Piernas">
+            </div>
+            <div class="leyenda-info">
+                <h2>Tom Platz</h2>
+                <h3>"The Quadfather"</h3>
+                <ul>
+                    <li><strong>Era:</strong> Golden Era Tardía (80s)</li>
+                    <li><strong>Destacado:</strong> Las mejores piernas de la historia.</li>
+                    <li><strong>Filosofía:</strong> Intensidad Suicida.</li>
+                </ul>
+                <p>
+                    Tom Platz no ganaba por tamaño total, sino por sus piernas alienígenas. Hacía sentadillas con 225kg a 
+                    reencarnaciones de 10 minutos seguidos. Su mentalidad era "morir" en el gimnasio para renacer más fuerte.
+                </p>
+            </div>
+        </article>
+
+        <article class="leyenda-card inverso">
+            <div class="leyenda-media">
+                <img src="/imagenes/cbum posando.webp" alt="Chris Bumstead Classic Physique">
+            </div>
+            <div class="leyenda-info">
+                <h2>Chris Bumstead (CBum)</h2>
+                <h3>"El Rey del Classic"</h3>
+                <ul>
+                    <li><strong>Era:</strong> Moderna (Actualidad)</li>
+                    <li><strong>Mr. Olympia Classic:</strong> 5 Títulos (y contando)</li>
+                    <li><strong>Filosofía:</strong> Estética sobre tamaño puro.</li>
+                </ul>
+                <p>
+                    CBum trajo de vuelta la estética clásica. Cintura estrecha, vacío abdominal y hombros anchos. 
+                    Demostró que no hace falta ser un "monstruo de masa" para tener el físico más admirado del mundo.
+                </p>
+            </div>
+        </article>
+
+    </div>
+
+    <div class="formulario">
+        <h2>¿A quién te quieres parecer?</h2>
+        <p>Elige tu camino</p>
+
+        <form id="form-leyendas">
+            <label for="objetivo">Objetivo:</label>
+            <select id="objetivo">
+                <option value="estetica">Estética (Arnold/CBum)</option>
+                <option value="fuerza">Fuerza (Ronnie)</option>
+                <option value="intensidad">Intensidad (Platz)</option>
+            </select>
+            <label for="comentario">Comentarios:</label>
+            <textarea id="comentario"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script src="leyendasdelgym.js"></script>
+</body>
+</html>
