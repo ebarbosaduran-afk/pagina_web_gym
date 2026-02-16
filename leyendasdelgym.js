@@ -1,25 +1,25 @@
-// 1. ANIMACIÓN DE LAS TARJETAS (Necesario por tu CSS)
+
 document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.sw-card');
     
-    // Añadir la clase 'visible' con un pequeño retraso entre cada una
+  
     cards.forEach((card, index) => {
         setTimeout(() => {
             card.classList.add('visible');
-        }, index * 200); // 200ms de diferencia entre cada tarjeta
+        }, index * 200); 
     });
 });
 
-// 2. LÓGICA DEL FORMULARIO
+
 document.getElementById('form-leyendas').addEventListener('submit', function(e) {
-    e.preventDefault(); // Evita que se recargue la página
+    e.preventDefault();
 
     const objetivo = document.getElementById('objetivo').value;
     const tiempo = document.getElementById('tiempo').value;
     
     let mensaje = "";
 
-    // Lógica simple
+    
     if (objetivo === 'estetica') {
         mensaje = "Tu referente es ARNOLD. Enfócate en el volumen y la proporción.";
     } else if (objetivo === 'fuerza') {
@@ -31,4 +31,5 @@ document.getElementById('form-leyendas').addEventListener('submit', function(e) 
     }
 
     alert(mensaje);
+
 });
