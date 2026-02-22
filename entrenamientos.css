@@ -1,0 +1,247 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    line-height: 1.6;
+
+
+    background-image: 
+        linear-gradient(rgba(15, 26, 23, 0.82), rgba(15, 26, 23, 0.95)),
+        
+        url('fondoentrenamiento.png'); 
+
+    background-attachment: fixed; 
+    background-size: cover;       
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 40px;
+    background-color: #132521;
+   
+    position: relative; 
+    z-index: 10;
+}
+
+header img {
+    max-width: 250px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #9fffd8;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #1f3d36;
+    color: #ffffff;
+}
+
+nav a.activo {
+    background-color: #9fffd8;
+    color: #0f1a17;
+}
+
+
+.hero-section {
+    position: relative;
+    padding: 140px 20px; 
+    text-align: center;
+    margin-bottom: 50px;
+
+  
+    background-image: 
+        linear-gradient(rgba(15, 26, 23, 0.80), rgba(19, 37, 33, 0.9)),
+        url('cabeceroentrenamiento.png'); 
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    
+    border-bottom: 2px solid #2a4a42;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+
+.hero-section h1 {
+    font-size: 3.5em; 
+    margin: 0;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.8); 
+}
+
+.hero-section p {
+    font-size: 1.3em;
+    max-width: 750px;
+    margin: 20px auto 0 auto;
+    color: #e0e0e0;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+
+
+.cabecera-seccion {
+    margin-bottom: 30px;
+}
+
+.cabecera-seccion h2 {
+    font-size: 36px;
+    color: #00d4aa;
+    margin-bottom: 10px;
+}
+
+.cabecera-seccion p {
+    color: #b0b0b0;
+    font-size: 1.1em;
+}
+
+
+.contenedor-principal {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.tarjeta {
+    background: rgba(19, 37, 33, 0.6); 
+    border: 1px solid #2a4a42;
+    border-radius: 12px;
+    padding: 30px;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    
+    
+    opacity: 0; 
+    transform: translateY(30px);
+}
+
+
+.tarjeta.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    border-color: #00d4aa;
+    box-shadow: 0 10px 20px rgba(0, 212, 170, 0.1);
+}
+
+.icono {
+    font-size: 3em;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.tarjeta h3 {
+    color: #9fffd8;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.tarjeta p {
+    color: #d0d0d0;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+
+.tarjeta-grande {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(145deg, rgba(19, 37, 33, 0.9), rgba(0, 212, 170, 0.05));
+}
+
+
+.etiqueta-rutina {
+    display: inline-block;
+    background-color: #2a4a42;
+    color: #9fffd8;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    margin-top: 20px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+
+.contenedor-tabla {
+    overflow-x: auto; 
+    margin-top: 30px;
+    border-radius: 10px;
+    border: 1px solid #2a4a42;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    
+   
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #132521;
+    min-width: 700px;
+}
+
+th, td {
+    padding: 18px;
+    text-align: left;
+    border-bottom: 1px solid #2a4a42;
+}
+
+th {
+    background-color: #1f3d36;
+    color: #9fffd8;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+}
+
+td {
+    color: #d0d0d0;
+    font-size: 0.95em;
+}
+
+
+tr:hover td {
+    background-color: rgba(0, 212, 170, 0.05);
+    color: #ffffff;
+}
+
+
+td:first-child {
+    font-weight: bold;
+    color: #00d4aa;
+    font-size: 1.05em;
+}
