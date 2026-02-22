@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    line-height: 1.6;
+    background-image:
+        linear-gradient(rgba(15, 26, 23, 0.85), rgba(15, 26, 23, 0.95)),
+        url('#'); 
+    background-attachment: fixed;
+    background-size: cover;      
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #0f1a17;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #132521;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #9fffd8;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #1f3d36;
+    color: #ffffff;
+}
+
+nav a.activo {
+    background-color: #9fffd8;
+    color: #0f1a17;
+}.hero-section {
+    padding: 120px 20px;
+    text-align: center;
+    background-image:
+        linear-gradient(rgba(15, 26, 23, 0.7), rgba(19, 37, 33, 0.85)),
+        url('#'); 
+    background-size: cover;
+    background-position: center;
+    border-bottom: 2px solid #2a4a42;
+}
+
+.hero-section h1 {
+    font-size: 3.5em;
+    color: #ffffff;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 20px auto 0;
+    color: #d0d0d0;
+}
+
+
+.contenedor-principal {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.cabecera-seccion h2 {
+    font-size: 36px;
+    color: #00d4aa;
+    margin-bottom: 10px;
+}
+
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.tarjeta {
+    background: rgba(19, 37, 33, 0.8);
+    border: 1px solid #2a4a42;
+    border-radius: 15px;
+    padding: 35px;
+    transition: 0.3s;
+    
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px);
+    border-color: #00d4aa;
+    box-shadow: 0 10px 30px rgba(0, 212, 170, 0.15);
+}
+
+.icono {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+
+.tarjeta h3 {
+    color: #9fffd8;
+    margin-bottom: 15px;
+}
+
+.tarjeta p {
+    color: #b0b0b0;
+    font-size: 0.95em;
+}
+
+.tarjeta-grande {
+    max-width: 900px;
+    margin: 40px auto;
+    background: linear-gradient(145deg, rgba(19, 37, 33, 0.9), rgba(0, 212, 170, 0.1));
+}
+
+
+ul li strong {
+    color: #00d4aa;
+}
