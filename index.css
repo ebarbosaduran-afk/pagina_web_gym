@@ -15,7 +15,7 @@ body {
     background-color: #0f1a17;
     background-image:
         linear-gradient(rgba(15, 26, 23, 0.9), rgba(15, 26, 23, 0.95)),
-        url('gym-background.jpg');
+        url('fondopgprinc.png');
     background-attachment: fixed;
     background-size: cover;
     overflow-x: hidden;
