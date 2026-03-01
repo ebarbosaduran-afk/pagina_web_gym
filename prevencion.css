@@ -48,7 +48,6 @@ nav a {
     color: #cbd5e1;
     font-weight: 700;
     font-size: 0.9rem;
-    text-transform: uppercase;
     transition: 0.3s;
 }
 
@@ -145,4 +144,5 @@ nav a.activo {
 }
 
 footer { text-align: center; padding: 40px; border-top: 1px solid #2a4a42; }
+
 
