@@ -1,54 +1,54 @@
+window.addEventListener('scroll', () => {
+    const encabezado = document.getElementById('cabecera-principal');
+    if (window.scrollY > 50) {
+        encabezado.classList.add('scrolled');
+    } else {
+        encabezado.classList.remove('scrolled');
+    }
+});
 
-const cards = document.querySelectorAll(".sw-card");
 
-const observer = new IntersectionObserver(
-    (entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-            }
-        });
-    },
-    { threshold: 0.2 }
-);
+function desplazarHaciaContenido() {
+    document.getElementById('zona-contenido').scrollIntoView({ behavior: 'smooth' });
+}
 
-cards.forEach(card => observer.observe(card));
 
-const form = document.querySelector("form");
+function calcularRepeticionMaxima() {
 
-form.addEventListener("submit", function (e) {
-    e.preventDefault();
+    const peso = parseFloat(document.getElementById('campo-peso').value);
+    const repeticiones = parseInt(document.getElementById('campo-repeticiones').value);
 
-    const nombre = form.querySelector("input").value.trim();
-    const valoracion = form.querySelector("select").value;
-    const comentario = form.querySelector("textarea").value.trim();
+    const cajaResultado = document.getElementById('resultado-rm');
+    const valorMostrar = document.getElementById('valor-rm');
+    const descripcionMostrar = document.getElementById('descripcion-rm');
 
-    if (nombre.length < 3) {
-        alert("El nombre debe tener al menos 3 caracteres");
+
+    if (!peso || !repeticiones || peso <= 0 || repeticiones <= 0) {
+        alert("Por favor, introduce valores válidos para peso y repeticiones.");
         return;
     }
 
-    const datos = {
-        nombre,
-        valoracion,
-        comentario,
-        fecha: new Date().toLocaleDateString()
-    };
-
-    localStorage.setItem("valoracionFitPeak", JSON.stringify(datos));
-
-    alert("¡Gracias por tu valoración! 💪");
-
-    form.reset();
-});
+    if (repeticiones > 15) {
+        alert("Para resultados precisos, inténtalo con un número menor a 15 repeticiones.");
+    }
 
 
-   
-window.addEventListener("load", () => {
-    setTimeout(() => {
-        alert("Bienvenido a FitPeak");
-    }, 800);
-});
+    const repeticionMaxima = peso * (1 + (0.0333 * repeticiones));
+
+    valorMostrar.textContent = Math.round(repeticionMaxima) + " kg";
+    valorMostrar.style.color = "#00d4aa";
+
+    descripcionMostrar.textContent = "Este es tu 1 RM estimado (Repetición Máxima). Úsalo para planificar tus porcentajes de intensidad.";
 
 
+    cajaResultado.classList.remove('oculto');
+}
 
+const formularioOpinion = document.getElementById('formulario-opinion');
+if (formularioOpinion) {
+    formularioOpinion.addEventListener('submit', function (evento) {
+        evento.preventDefault();
+        alert('¡Gracias por tu valoración! Seguiremos mejorando FitPeak para llevar tu físico al siguiente nivel.');
+        this.reset();
+    });
+}
