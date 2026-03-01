@@ -1,96 +1,154 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <link rel="icon" href="fitpeakfavicon.jpg">
-    <title>Título de la página</title>
+    <link rel="icon" href="fitpeak.png">
+    <title>FitPeak</title>
 </head>
 
 <body>
-    <header>
-        <img src="fitpeak.png" width="250" alt="Logo de FitPeak">
+    <header id="cabecera-principal">
+        <img src="fitpeak.png" width="200" alt="Logo de FitPeak" class="imagen-logo">
         <nav>
-            <a href="suplementacion.html">Suplementación</a>
+            <a href="index.html" class="enlace-activo">Pagina principal</a>
+            <a href="suplementacion.html">Suplementacion</a>
             <a href="nutricion.html">Nutrición</a>
             <a href="leyendas.html">Leyendas</a>
-            <a href="entrenamientos.html">Entrenamientos</a>
+            <a href="entrenamientos.html">Entrenamiento</a>
             <a href="prevencion.html">Prevención de lesiones</a>
         </nav>
     </header>
 
-    <h1>Página de inicio</h1>
-    <p>
-        FitPeak es una plataforma dedicada al mundo del gimnasio, pensada tanto
-        para principiantes como para personas con experiencia que quieran mejorar
-        su físico, su salud y sus conocimientos.
-    </p>
-
-    <div>
-        <h2>¿Qué encontrarás en FitPeak?</h2>
-        <ul>
-            <li>Información sobre suplementación deportiva</li>
-            <li>Guías de nutrición para distintos objetivos</li>
-            <li>Leyendas del fitness que marcaron época</li>
-            <li>Rutinas y tipos de entrenamientos</li>
-            <li>Consejos para prevenir lesiones</li>
-        </ul>
-    </div>
-
-    <div class="sw-container">
-        <div class="sw-header">
-            <h2>¿Sabías que...?</h2>
-            <p>Datos curiosos sobre el cuerpo y el ejercicio</p>
+    <div class="seccion-portada">
+        <div class="texto-portada">
+            <h1>Tu progreso empieza con el conocimiento correcto</h1>
+            <p>Lleva tu físico y tu disciplina al siguiente nivel.</p>
+            <button class="boton-accion" onclick="desplazarHaciaContenido()">Explorar Ahora</button>
         </div>
 
-        <div class="sw-cards">
-            <div class="sw-card">
-                <div class="sw-icon">⚖️</div>
-                <h3>Músculo vs Grasa</h3>
-                <p>El músculo pesa más que la grasa. Puedes estar perdiendo grasa y ganando músculo aunque la báscula no baje.</p>
-            </div>
-
-            <div class="sw-card">
-                <div class="sw-icon">🔥</div>
-                <h3>Efecto Post-Quema</h3>
-                <p>Tu cuerpo continúa quemando calorías hasta 48 horas después de entrenar intensamente.</p>
-            </div>
-
-            <div class="sw-card">
-                <div class="sw-icon">⚡</div>
-                <h3>Metabolismo Basal</h3>
-                <p>Entrenar con pesas aumenta tu metabolismo basal entre 5-10%, incluso en reposo.</p>
-            </div>
+        <div class="boton-desplazar" onclick="desplazarHaciaContenido()">
+            <p>DESCUBRE</p>
+            <div class="flecha-movimiento">↓</div>
         </div>
     </div>
 
-    <div class="formulario">
+    <div id="zona-contenido" class="contenedor-contenido">
+        <div class="titulo-seccion">
+            <h2>Qué encontrarás en FitPeak</h2>
+            <div class="linea-decorativa"></div>
+        </div>
+
+        <div class="caja-informacion">
+            <div class="texto-informacion">
+                <span class="numero-fondo">01</span>
+                <h3>Suplementación</h3>
+                <p>No tires el dinero en marketing. Analizamos la evidencia científica real sobre la creatina, proteína
+                    y más para que compres solo lo que funciona.</p>
+            </div>
+            <div class="contenedor-icono">
+                <div class="icono-redondo efecto-brillante">💊</div>
+            </div>
+        </div>
+
+        <div class="caja-informacion orden-inverso">
+            <div class="texto-informacion">
+                <span class="numero-fondo">02</span>
+                <h3>Nutrición</h3>
+                <p>Domina tus macros. Nuestra calculadora te dará las calorías y proteínas necesarias según tu objetivo:
+                    ganar músculo limpio o definir al máximo.</p>
+            </div>
+            <div class="contenedor-icono">
+                <div class="icono-redondo efecto-brillante">🥩</div>
+            </div>
+        </div>
+
+        <div class="caja-informacion">
+            <div class="texto-informacion">
+                <span class="numero-fondo">03</span>
+                <h3>Entrenamientos</h3>
+                <p>Desde rutinas Full Body hasta PPL y Arnold Split. Entrena con sentido, controla tu RIR y progresa de
+                    verdad cada semana.</p>
+            </div>
+            <div class="contenedor-icono">
+                <div class="icono-redondo efecto-brillante">🏋️‍♂️</div>
+            </div>
+        </div>
+
+        <div class="caja-informacion orden-inverso">
+            <div class="texto-informacion">
+                <span class="numero-fondo">04</span>
+                <h3>Prevención</h3>
+                <p>El mejor entrenamiento es del que puedes recuperarte. Aprende técnicas de calentamiento dinámico y
+                    gestión inteligente de la fatiga.</p>
+            </div>
+            <div class="contenedor-icono">
+                <div class="icono-redondo efecto-brillante">🛡️</div>
+            </div>
+        </div>
+
+        <div class="caja-informacion">
+            <div class="texto-informacion">
+                <span class="numero-fondo">05</span>
+                <h3>Leyendas</h3>
+                <p>Inspiración y mentalidad. Conoce la historia de los grandes referentes que marcaron un antes y un
+                    después en el culturismo mundial.</p>
+            </div>
+            <div class="contenedor-icono">
+                <div class="icono-redondo efecto-brillante">🐐</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="seccion-calculadora">
+        <div class="titulo-seccion">
+            <h2>Calculadora de 1RM</h2>
+            <div class="linea-decorativa"></div>
+            <p>Conoce tu Repetición Máxima para planificar tu entrenamiento</p>
+        </div>
+        <div class="caja-calculadora">
+            <div class="grupo-formulario">
+                <label for="campo-peso">Peso levantado (kg)</label>
+                <input type="number" id="campo-peso" placeholder="Ej: 80">
+            </div>
+            <div class="grupo-formulario">
+                <label for="campo-repeticiones">Repeticiones logradas</label>
+                <input type="number" id="campo-repeticiones" placeholder="Ej: 8">
+            </div>
+            <button class="boton-accion" onclick="calcularRepeticionMaxima()">Calcular 1RM</button>
+            <div id="resultado-rm" class="caja-resultado oculto">
+                <h3 id="valor-rm">--</h3>
+                <p id="descripcion-rm">--</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="seccion-contacto">
         <h2>Tu opinión nos importa</h2>
-        <p>Déjanos tu comentario o valora la página</p>
-
-        <form>
-            <label for="nombre">Nombre:</label><br>
-            <input type="text" id="nombre" placeholder="Tu nombre"><br><br>
-
-            <label for="valoracion">Valoración:</label><br>
+        <form id="formulario-opinion">
+            <input type="text" id="nombre" placeholder="Tu nombre" required>
             <select id="valoracion">
-                <option>⭐</option>
-                <option>⭐⭐</option>
-                <option>⭐⭐⭐</option>
-                <option>⭐⭐⭐⭐</option>
                 <option>⭐⭐⭐⭐⭐</option>
-            </select><br><br>
-
-            <label for="comentario">Comentario:</label><br>
-            <textarea id="comentario" placeholder="Escribe tu comentario..."></textarea><br><br>
-
-            <button type="submit">Enviar</button>
+                <option>⭐⭐⭐⭐</option>
+                <option>⭐⭐⭐</option>
+                <option>⭐⭐</option>
+                <option>⭐</option>
+            </select>
+            <textarea id="comentario" placeholder="¿Qué te parece la web?" required></textarea>
+            <button type="submit" class="boton-accion">Enviar Valoración</button>
         </form>
     </div>
+
+    <footer>
+        <p>Desarrollado por Estudiantes de Izan Martinez y Edwin Barbosa</p>
+        <p class="texto-derechos">FitPeak - SMR</p>
+    </footer>
+
     <script src="index.js"></script>
-
 </body>
-</html>
 
+</html>
     
     
