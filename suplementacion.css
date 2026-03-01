@@ -11,33 +11,42 @@ body {
     line-height: 1.6;
 }
 
-/* NAV */
-.top-header {
-    background-color: #132521;
-    padding: 20px 40px;
-}
-
-.navbar {
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 50px; 
+    background: rgba(15, 26, 23, 0.95);
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between; 
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 212, 170, 0.2);
 }
 
-.navbar a {
-    color: #9fffd8;
+.logo-main {
+    max-width: 240px; 
+    height: auto;
+}
+
+nav {
+    display: flex;
+    gap: 30px; 
+}
+
+nav a {
     text-decoration: none;
-    font-weight: bold;
-    padding: 8px 14px;
-    border-radius: 6px;
+    color: #cbd5e1;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
     transition: 0.3s;
 }
 
-.navbar a:hover {
-    background-color: #1f3d36;
-    color: #ffffff;
+nav a:hover, nav a.activo {
+    color: #00d4aa; 
 }
 
-/* TITULO */
 h1 {
     text-align: center;
     margin-top: 40px;
@@ -52,7 +61,7 @@ h1 {
     color: #d0d0d0;
 }
 
-/* SUPLEMENTOS */
+
 .suplemento {
     display: flex;
     gap: 30px;
@@ -116,3 +125,4 @@ h1 {
 .btn:hover {
     background-color: #9df5d6;
 }
+
