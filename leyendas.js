@@ -1,3 +1,11 @@
+window.addEventListener('scroll', () => {
+    const encabezado = document.getElementById('cabecera-principal');
+    if (window.scrollY > 50) {
+        encabezado.classList.add('scrolled');
+    } else {
+        encabezado.classList.remove('scrolled');
+    }
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.sw-card');
