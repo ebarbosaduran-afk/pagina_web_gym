@@ -46,6 +46,10 @@ header.scrolled {
 }
 
 .imagen-logo {
+    width: 200px;
+    height: 60px;
+    object-fit: contain;
+    object-position: left center;
     transition: transform 0.3s ease;
 }
 
@@ -62,12 +66,10 @@ nav {
 nav a {
     text-decoration: none;
     color: #ffffff;
-
-    font-weight: 500;
+    font-weight: bold;
     font-size: 0.95rem;
     padding: 8px 16px;
     border-radius: 6px;
-
     transition: all 0.2s ease;
     border: none;
 }
@@ -84,6 +86,7 @@ nav a:hover {
 
 .seccion-portada {
     height: 100vh;
+    min-height: 550px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -472,8 +475,13 @@ footer p {
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        padding: 15px;
-        gap: 15px;
+        padding: 10px;
+        gap: 10px;
+    }
+    .imagen-logo {
+        width: 140px;
+        height: 40px;
+        object-position: center center;
     }
 
     .seccion-portada h1 {
@@ -497,5 +505,10 @@ footer p {
     nav {
         flex-wrap: wrap;
         justify-content: center;
+        gap: 5px;
+    }
+    nav a {
+        padding: 6px 10px;
+        font-size: 0.85rem;
     }
 }
