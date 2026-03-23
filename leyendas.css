@@ -1,14 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     color: #ffffff;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    /* CAMBIO CLAVE: Transparente para que se vea el video que está detrás */
     background-color: transparent; 
 }
 
-/* --- 2. CONTENEDOR DEL VIDEO (FIJO) --- */
+/* 2. CONTENEDOR DEL VIDEO (FIJO) */
 .video-background {
     position: fixed; /* Esto lo pega a la pantalla, no se mueve al bajar */
     top: 0;
@@ -19,7 +28,7 @@ body {
     overflow: hidden;
 }
 
-/* --- 3. EL VIDEO EN SÍ (AJUSTE PERFECTO) --- */
+/* 3. EL VIDEO EN SÍ (AJUSTE PERFECTO) */
 .video-background video {
     position: absolute;
     top: 50%;
@@ -33,48 +42,102 @@ body {
     object-fit: cover;
 }
 
-/* --- 4. LA CAPA OSCURA (FILTRO) --- */
+/* 4. LA CAPA OSCURA (FILTRO) */
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* Ajusté la opacidad a 0.75 para que se vea un poco más el video */
+    /* Opacidad a 0.75 para que se vea un poco más el video */
     background-color: rgba(15, 26, 23, 0.75); 
 }
 
-/* --- HEADER / NAVEGACIÓN --- */
+/* NAVEGACIÓN */
 header {
-    background-color: rgba(19, 37, 33, 0.95);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    border-bottom: 2px solid #1f3d36;
-    position: sticky;
+    position: fixed;
     top: 0;
+    width: 100%;
     z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 3%; 
+    background: rgba(15, 26, 23, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 212, 170, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
 }
 
-header img { max-width: 250px; }
-nav { display: flex; gap: 20px; }
+header.scrolled {
+    padding: 10px 5%;
+    background: rgba(15, 26, 23, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 212, 170, 0.15);
+}
+
+.imagen-logo {
+    width: 200px;
+    height: 60px;
+    object-fit: contain;
+    object-position: left center;
+    transition: transform 0.3s ease;
+}
+
+.imagen-logo:hover {
+    transform: scale(1.05);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 12px; 
+    align-items: center;
+}
 
 nav a {
     text-decoration: none;
-    color: #9fffd8;
-    font-weight: bold;
-    padding: 8px 14px;
-    border-radius: 6px;
-    transition: 0.3s;
-}
-
-nav a:hover, nav a.activo {
-    background-color: #1f3d36;
     color: #ffffff;
+    font-weight: bold;
+    font-size: 0.9rem; 
+    padding: 8px 12px; 
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    border: none;
 }
 
-/* --- TEXTO PRINCIPAL (HERO) --- */
+nav a.enlace-activo,
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: none;
+    box-shadow: none;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+    .imagen-logo {
+        width: 140px;
+        height: 40px;
+        object-position: center center;
+    }
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+    nav a {
+        padding: 6px 10px;
+        font-size: 0.85rem;
+    }
+}
+
+/* TEXTO PRINCIPAL (HERO) */
 .hero-text {
     text-align: center;
     padding: 60px 20px;
@@ -86,7 +149,7 @@ nav a:hover, nav a.activo {
     margin-bottom: 10px;
 }
 
-/* --- CONTENEDOR DE LEYENDAS --- */
+/* CONTENEDOR DE LEYENDAS */
 .leyendas-wrapper {
     max-width: 1100px;
     margin: 0 auto;
@@ -96,7 +159,7 @@ nav a:hover, nav a.activo {
     gap: 60px;
 }
 
-/* --- TARJETAS --- */
+/* TARJETAS */
 .leyenda-card {
     display: flex;
     align-items: center;
@@ -119,7 +182,7 @@ nav a:hover, nav a.activo {
     flex-direction: row-reverse;
 }
 
-/* --- IMÁGENES Y MEDIA --- */
+/* IMÁGENES Y MEDIA */
 .leyenda-media {
     flex: 1;
     min-width: 300px;
@@ -135,7 +198,7 @@ nav a:hover, nav a.activo {
     object-fit: cover;
 }
 
-/* --- INFORMACIÓN DE LEYENDAS --- */
+/* INFORMACIÓN DE LEYENDAS */
 .leyenda-info {
     flex: 1;
     text-align: left;
@@ -171,7 +234,7 @@ nav a:hover, nav a.activo {
     color: #e0e0e0;
 }
 
-/* --- FORMULARIO --- */
+/* FORMULARIO */
 .formulario {
     background-color: rgba(19, 37, 33, 0.9);
     padding: 40px;
@@ -198,7 +261,7 @@ button {
 }
 button:hover { background-color: #9fffd8; }
 
-/* --- RESPONSIVE (MÓVIL) --- */
+/* MÓVIL */
 @media (max-width: 768px) {
     .leyenda-card, .leyenda-card.inverso {
         flex-direction: column;
@@ -209,3 +272,4 @@ button:hover { background-color: #9fffd8; }
     .leyenda-info p { text-align: center; }
     
     header { flex-direction: column; gap: 10px; }
+}
