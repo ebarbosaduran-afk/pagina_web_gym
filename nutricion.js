@@ -1,4 +1,3 @@
-
 const tarjetas = document.querySelectorAll(".tarjeta");
 
 const observador = new IntersectionObserver(
