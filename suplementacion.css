@@ -12,34 +12,83 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
-    padding: 20px 0;
-    background: rgba(15, 26, 23, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0, 212, 170, 0.2);
-}
-
-.header-container {
-    max-width: 1400px;
-    margin: 0 auto;
+    z-index: 100;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
+    justify-content: space-between;
+    padding: 15px 5%;
+    background: rgba(15, 26, 23, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 212, 170, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
 }
 
-.logo-main { max-width: 250px; height: auto; }
+header.scrolled {
+    padding: 10px 5%;
+    background: rgba(15, 26, 23, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 212, 170, 0.15);
+}
 
-nav { display: flex; gap: 30px; }
+.imagen-logo {
+    width: 200px;
+    height: 60px;
+    object-fit: contain;
+    object-position: left center;
+    transition: transform 0.3s ease;
+}
+
+.imagen-logo:hover {
+    transform: scale(1.05);
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
 nav a {
     text-decoration: none;
-    color: #cbd5e1;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    transition: 0.3s;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    border: none;
 }
-nav a.activo, nav a:hover { color: #00d4aa; }
+
+nav a.enlace-activo,
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: none;
+    box-shadow: none;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+    .imagen-logo {
+        width: 140px;
+        height: 40px;
+        object-position: center center;
+    }
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+    nav a {
+        padding: 6px 10px;
+        font-size: 0.85rem;
+    }
+}
 
 .espaciador-header { height: 140px; }
 
