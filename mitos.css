@@ -1,0 +1,370 @@
+/* === RESET Y BASE === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    line-height: 1.6;
+    background-color: #0f1a17;
+    background-image: linear-gradient(rgba(15, 26, 23, 0.9), rgba(15, 26, 23, 0.95));
+    overflow-x: hidden;
+}
+
+/* === HEADER / NAVEGACIÓN === */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5%;
+    background: rgba(15, 26, 23, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 212, 170, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+header.scrolled {
+    padding: 10px 5%;
+    background: rgba(15, 26, 23, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 212, 170, 0.15);
+}
+
+.imagen-logo {
+    width: 200px;
+    height: 60px;
+    object-fit: contain;
+    object-position: left center;
+    transition: transform 0.3s ease;
+}
+
+.imagen-logo:hover {
+    transform: scale(1.05);
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+nav a.enlace-activo,
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: none;
+    box-shadow: none;
+}
+
+/* === ESPACIADOR PARA HEADER FIJO === */
+.espaciador-header {
+    height: 100px;
+}
+
+/* === HERO SECTION === */
+.hero-section {
+    padding: 80px 20px 100px;
+    text-align: center;
+    border-bottom: 2px solid #2a4a42;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 212, 170, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.hero-icono {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    animation: pulso 3s ease-in-out infinite;
+}
+
+@keyframes pulso {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.15); opacity: 1; }
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    color: #00d4aa;
+    text-shadow: 0 0 30px rgba(0, 212, 170, 0.3);
+    margin-bottom: 15px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    color: #cccccc;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* === CONTENEDOR PRINCIPAL === */
+.contenedor-principal {
+    max-width: 1100px;
+    margin: 60px auto 80px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+/* === TARJETA DE MITO === */
+.tarjeta-mito {
+    background: rgba(19, 37, 33, 0.6);
+    border: 1px solid #2a4a42;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+    backdrop-filter: blur(5px);
+}
+
+.tarjeta-mito:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0, 212, 170, 0.5);
+    box-shadow: 0 20px 50px rgba(0, 212, 170, 0.12), 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* === HEADER DEL MITO === */
+.mito-header {
+    padding: 30px 30px 20px;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 212, 170, 0.15);
+    background: rgba(0, 212, 170, 0.03);
+}
+
+.mito-numero {
+    font-size: 5rem;
+    font-weight: 900;
+    color: #ffffff;
+    opacity: 0.07;
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    user-select: none;
+    line-height: 1;
+}
+
+.mito-icono {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+}
+
+.mito-header h2 {
+    font-size: 1.4rem;
+    color: #00d4aa;
+    font-weight: 700;
+    line-height: 1.3;
+    position: relative;
+    z-index: 2;
+}
+
+/* === CUERPO DEL MITO === */
+.mito-cuerpo {
+    padding: 25px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* === BLOQUE CREENCIA (EL MITO) === */
+.bloque-creencia {
+    background: rgba(255, 100, 100, 0.06);
+    border-left: 4px solid #ff6b6b;
+    border-radius: 0 12px 12px 0;
+    padding: 18px 20px;
+}
+
+.bloque-creencia h3 {
+    font-size: 0.9rem;
+    color: #ff8a8a;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.bloque-creencia p {
+    font-size: 0.95rem;
+    color: #e0e0e0;
+    line-height: 1.7;
+    font-style: italic;
+}
+
+/* === BLOQUE VERDAD (LA CIENCIA) === */
+.bloque-verdad {
+    background: rgba(0, 212, 170, 0.05);
+    border-left: 4px solid #00d4aa;
+    border-radius: 0 12px 12px 0;
+    padding: 18px 20px;
+}
+
+.bloque-verdad h3 {
+    font-size: 0.9rem;
+    color: #9fffd8;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.bloque-verdad ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bloque-verdad ul li {
+    font-size: 0.95rem;
+    color: #e0e0e0;
+    line-height: 1.7;
+    padding-left: 20px;
+    position: relative;
+}
+
+.bloque-verdad ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #00d4aa;
+    font-weight: bold;
+}
+
+.bloque-verdad ul li strong {
+    color: #9fffd8;
+}
+
+/* === FOOTER === */
+footer {
+    background: #050908;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid #132521;
+}
+
+footer p {
+    color: #888888;
+}
+
+.texto-derechos {
+    margin-top: 10px;
+    color: #00d4aa;
+    font-weight: bold;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .imagen-logo {
+        width: 140px;
+        height: 40px;
+        object-position: center center;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    nav a {
+        padding: 6px 10px;
+        font-size: 0.85rem;
+    }
+
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-section p {
+        font-size: 1.05rem;
+    }
+
+    .hero-icono {
+        font-size: 3rem;
+    }
+
+    .contenedor-principal {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin: 40px auto 60px;
+    }
+
+    .mito-header {
+        padding: 25px 20px 18px;
+    }
+
+    .mito-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .mito-numero {
+        font-size: 3.5rem;
+    }
+
+    .mito-cuerpo {
+        padding: 20px;
+    }
+
+    .bloque-creencia,
+    .bloque-verdad {
+        padding: 14px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 60px 15px 70px;
+    }
+
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .mito-header h2 {
+        font-size: 1.1rem;
+    }
+
+    .bloque-creencia p,
+    .bloque-verdad ul li {
+        font-size: 0.88rem;
+    }
+}
