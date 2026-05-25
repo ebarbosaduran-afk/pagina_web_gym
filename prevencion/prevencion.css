@@ -112,10 +112,14 @@ nav a:hover {
     padding: 0 20px;
 }
 
+.cabecera-seccion {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 .cabecera-seccion h2 {
     font-size: 2.2rem;
     color: #00d4aa;
-    text-align: center;
     margin-bottom: 15px;
 }
 

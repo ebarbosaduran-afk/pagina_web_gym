@@ -140,7 +140,7 @@ nav a:hover {
 /* TEXTO PRINCIPAL (HERO) */
 .hero-text {
     text-align: center;
-    padding: 60px 20px;
+    padding: 140px 20px 60px 20px;
 }
 .hero-text h1 {
     font-size: 3em;
@@ -291,4 +291,8 @@ footer p {
     .leyenda-info p { text-align: center; }
     
     header { flex-direction: column; gap: 10px; }
+
+    .hero-text {
+        padding-top: 180px;
+    }
 }
