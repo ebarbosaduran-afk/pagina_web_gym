@@ -1,4 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
+    /* Efecto de scroll en el header */
+    const encabezado = document.getElementById('cabecera-principal');
+    if (encabezado) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                encabezado.classList.add('scrolled');
+            } else {
+                encabezado.classList.remove('scrolled');
+            }
+        });
+    }
 
     /* Detección de móvil*/
     const esMobil = () => window.innerWidth <= 768;

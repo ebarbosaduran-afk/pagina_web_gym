@@ -7,6 +7,24 @@ window.addEventListener('scroll', () => {
     }
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    /* Animación de aparición de cajas de información al hacer scroll */
+    const cajasInfo = document.querySelectorAll('.caja-informacion');
+    const observador = new IntersectionObserver((entradas, observador) => {
+        entradas.forEach(entrada => {
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add('visible');
+                observador.unobserve(entrada.target);
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+
+    cajasInfo.forEach(caja => {
+        observador.observe(caja);
+    });
+});
 
 function desplazarHaciaContenido() {
     document.getElementById('zona-contenido').scrollIntoView({ behavior: 'smooth' });

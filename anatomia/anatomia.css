@@ -16,6 +16,7 @@ html, body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    scroll-behavior: smooth;
 }
 
 
@@ -35,6 +36,12 @@ header {
     border-bottom: 1px solid rgba(0, 212, 170, 0.2); 
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease;
+}
+
+header.scrolled {
+    padding: 10px 5%;
+    background: rgba(15, 26, 23, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 212, 170, 0.15);
 }
 
 header img {

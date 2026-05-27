@@ -1,4 +1,4 @@
-// Efecto de scroll en el header (igual que el resto de páginas)
+/* Efecto de scroll en el header (igual que el resto de páginas) */
 window.addEventListener('scroll', () => {
     const encabezado = document.getElementById('cabecera-principal');
     if (window.scrollY > 50) {
@@ -8,7 +8,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Animación de aparición de tarjetas al hacer scroll
+/* Animación de aparición de tarjetas al hacer scroll */
 document.addEventListener('DOMContentLoaded', () => {
     const tarjetas = document.querySelectorAll('.tarjeta-mito');
 

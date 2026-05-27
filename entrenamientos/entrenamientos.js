@@ -1,3 +1,15 @@
+/* Efecto de scroll en el header */
+window.addEventListener('scroll', () => {
+    const encabezado = document.getElementById('cabecera-principal');
+    if (encabezado) {
+        if (window.scrollY > 50) {
+            encabezado.classList.add('scrolled');
+        } else {
+            encabezado.classList.remove('scrolled');
+        }
+    }
+});
+
 const tarjetas = document.querySelectorAll(".tarjeta");
 
 const tabla = document.querySelector(".contenedor-tabla");
